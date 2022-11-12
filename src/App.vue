@@ -1,30 +1,17 @@
 <template>
   <div id="app">
     <!-- 一级路由 -->
-    <i class="toutiao toutiao-shouye"></i>
-    <div class="div1">标题1</div>
-    <div class="div1">标题2</div>
     <router-view/>
   </div>
 </template>
 
 <script>
-import { userLoginAPI } from './api/index.js'
+// import Login from './views/login/logi.vue'
 export default {
-  name: 'App',
-  created () {
-    this.requertList()
-  },
-  methods: {
-    async requertList () {
-      try {
-        const res = await userLoginAPI()
-        console.log(res)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  }
+  name: 'App'
+  // components: {
+  //   Login
+  // }
 }
 </script>
 <style lang="less" scoped>

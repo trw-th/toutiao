@@ -5,6 +5,43 @@ Vue.use(VueRouter)
 
 const routes = [
 
+  {
+    path: '/layout',
+    component: () => import('../views/layout/layout.vue'),
+    redirect: '/layout/home',
+    children: [{
+      path: 'home',
+      component: () => import('../views/home/home.vue')
+    },
+    {
+      path: 'my',
+      component: () => import('../views/my/my.vue')
+    },
+    {
+      path: 'qa',
+      component: () => import('../views/qa/qa.vue')
+    },
+    {
+      path: 'video',
+      component: () => import('../views/video/video.vue')
+    }
+
+    ]
+  },
+
+  {
+    path: '/login',
+    component: () => import('../views/login/logi.vue')
+  },
+  {
+    path: '/search',
+    component: () => import('../views/search/search.vue')
+  },
+  // 文章跳转路由articleId为每一篇文章的id
+  {
+    path: '/article/:articleId',
+    component: () => import('../views/article/article.vue')
+  }
   // {
   //   path: '/about',
   //   name: 'about',

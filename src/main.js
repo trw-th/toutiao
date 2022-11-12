@@ -8,7 +8,8 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 // 引入全局样式表  全局样式表需要放在ui样式表的下面，这样才能够覆盖ui样式表中的内容
 import './styles/index.less'
-
+// 引入事件格式化工具
+import './utils/day.js'
 // 配置项目rem基准值
 // 1.npm i amfe-flexible 下载 lib-flexible 依赖
 // 2.在mian.js 中引入想应依赖
